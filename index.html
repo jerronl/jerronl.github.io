@@ -58,6 +58,12 @@ a.app:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.1
 .tags { display: flex; gap: 8px; flex-wrap: wrap; }
 .tag { font-size: 13px; padding: 2px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
 .tag.hot { background: var(--accent); border-color: var(--accent); color: #3b2f00; font-weight: 600; }
+.feat { list-style: none; margin: 2px 0 0; padding: 0; display: grid; gap: 7px; font-size: 15px; }
+.feat li { position: relative; padding-left: 22px; color: var(--muted); line-height: 1.5; }
+.feat li::before { content: "✓"; position: absolute; left: 0; top: 0; font-weight: 700; }
+.soccer .feat li::before { color: #1f8a43; }
+.chess .feat li::before { color: #b8322a; }
+.feat b { color: var(--ink); font-weight: 600; }
 .more { margin-top: auto; padding-top: 6px; font-weight: 600; }
 .soccer .more { color: #1f8a43; }
 .chess .more { color: #9b2a22; }
@@ -101,6 +107,15 @@ footer a { color: inherit; }
             <span class="en">Tap a player in a match video, follow every run, and export the clip with their running trail drawn on it.</span>
             <span class="zh">在比赛视频里点一下球员，跟踪他的每一次跑动，导出带跑动轨迹的视频。</span>
           </p>
+          <ul class="feat">
+            <li><span class="en"><b>Tap to pick a player</b> — tap their feet and a person detector draws the box for you</span><span class="zh"><b>点一下选人</b>：点球员脚下，人体识别自动框住他</span></li>
+            <li><span class="en"><b>Automatic tracking</b> — follows them frame by frame through camera pans, and finds them again after a crowd</span><span class="zh"><b>自动跟踪</b>：逐帧跟住球员，镜头移动也不怕，被人群挡住后会自动找回</span></li>
+            <li><span class="en"><b>Running trail</b> — a fading trail from 1 to 30 seconds, or the whole run</span><span class="zh"><b>跑动轨迹</b>：渐隐的轨迹，长度 1–30 秒或整段</span></li>
+            <li><span class="en"><b>Magnifier</b> — a picture-in-picture close-up that follows the player</span><span class="zh"><b>放大镜</b>：画中画特写，跟着球员走</span></li>
+            <li><span class="en"><b>Merge videos</b> — join both halves or several clips into one, in filming order</span><span class="zh"><b>合并视频</b>：把上下半场或几段视频按拍摄顺序合成一个</span></li>
+            <li><span class="en"><b>Export</b> — full resolution, with background music (listen before you choose) and adjustable original sound</span><span class="zh"><b>导出</b>：原分辨率，可加背景音乐（选歌时可试听），原声可调大小或去掉</span></li>
+            <li><span class="en"><b>Private</b> — everything runs offline on your phone; videos are never uploaded</span><span class="zh"><b>隐私</b>：全部在手机上离线处理，视频不会上传</span></li>
+          </ul>
           <span class="more"><span class="en">Features, install and how to use →</span><span class="zh">功能、安装和使用方法 →</span></span>
         </div>
       </a>
@@ -122,6 +137,14 @@ footer a { color: inherit; }
             <span class="en">Snap a photo of any board and get engine analysis, or play the computer — Xiangqi (Pikafish) and chess (Stockfish), all offline on your phone.</span>
             <span class="zh">拍照识别棋局，引擎分析，人机对弈；中国象棋（皮卡鱼引擎）和国际象棋（Stockfish）都支持，不联网也能用。</span>
           </p>
+          <ul class="feat">
+            <li><span class="en"><b>Photo recognition</b> — snap a board, a diagram or a screen; it finds the board and every piece, ready to check and play</span><span class="zh"><b>拍照识棋</b>：拍棋盘、棋谱或屏幕，自动找出棋盘、认出每个棋子，核对后就能下或分析</span></li>
+            <li><span class="en"><b>Engine analysis</b> — Pikafish for Xiangqi and Stockfish for chess show the best moves and evaluation</span><span class="zh"><b>引擎分析</b>：中国象棋用皮卡鱼（Pikafish），国际象棋用 Stockfish，给出最佳着法和局面评估</span></li>
+            <li><span class="en"><b>Play the computer</b> at several levels, or a friend on the same phone</span><span class="zh"><b>人机对弈</b>：多档难度，也可以两人在同一台手机上对局</span></li>
+            <li><span class="en"><b>Set up any position</b> by hand, with FEN copy and paste</span><span class="zh"><b>摆棋</b>：手动摆出任意局面，支持 FEN 复制粘贴</span></li>
+            <li><span class="en"><b>Report mistakes, earn ad-free days</b> — valid reports score points; every 5 points is one ad-free day, on a public leaderboard</span><span class="zh"><b>上报换免广告</b>：识别出错一键上报，有效上报得积分，每 5 分换 1 天免广告，积分榜公开</span></li>
+            <li><span class="en"><b>Offline</b> — the engines run on your phone</span><span class="zh"><b>离线可用</b>：引擎都在手机上运行</span></li>
+          </ul>
           <span class="more"><span class="en">Features, install and how to use →</span><span class="zh">功能、安装和使用方法 →</span></span>
         </div>
       </a>
