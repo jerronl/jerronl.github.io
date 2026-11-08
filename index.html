@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apps by jerron</title>
+<meta name="description" content="Android apps by jerron: Soccer Trail and Chess King. jerron 做的安卓应用：球员轨迹、棋王。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23202833'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='40' font-weight='700' text-anchor='middle' fill='%23ffd23f'%3Ej%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --ink: #1b2129;
+  --muted: #5d6673;
+  --line: #e1e5ea;
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --head: #202833;
+  --accent: #ffd23f;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #e9edf2; --muted: #a3acb8; --line: #2c3540; --bg: #12161b; --card: #1a2028; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+html[lang="en"] .zh, html[lang="zh"] .en { display: none !important; }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+header { background: var(--head); color: #fff; padding: 44px 0 52px; }
+header .bar { display: flex; justify-content: flex-end; margin-bottom: 22px; }
+.lang {
+  border: 1px solid #56606d; background: transparent; color: #fff;
+  border-radius: 999px; padding: 4px 12px; font: inherit; font-size: 14px; cursor: pointer;
+}
+h1 { margin: 0 0 8px; font-size: clamp(30px, 4.5vw, 44px); letter-spacing: -.4px; line-height: 1.15; }
+h1 .dot { color: var(--accent); }
+header p { margin: 0; color: #c3cad3; font-size: 18px; max-width: 38em; }
+
+main { padding: 40px 0 64px; }
+.apps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+@media (max-width: 760px) { .apps { grid-template-columns: 1fr; } }
+
+.app {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  display: flex; flex-direction: column; color: inherit; text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+a.app:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.14); }
+.app .banner { aspect-ratio: 1024 / 500; width: 100%; object-fit: cover; }
+.app .body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.app .title { display: flex; gap: 14px; align-items: center; }
+.app .title img { width: 56px; height: 56px; border-radius: 13px; flex: none; }
+.app h2 { margin: 0; font-size: 21px; line-height: 1.25; }
+.app h2 small { display: block; font-size: 14px; font-weight: 500; color: var(--muted); }
+.app p { margin: 0; color: var(--muted); }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag { font-size: 13px; padding: 2px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+.tag.hot { background: var(--accent); border-color: var(--accent); color: #3b2f00; font-weight: 600; }
+.more { margin-top: auto; padding-top: 6px; font-weight: 600; }
+.soccer .more { color: #1f8a43; }
+@media (prefers-color-scheme: dark) { .soccer .more { color: #6fd18f; } }
+.links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; }
+.links a {
+  text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 14px; border-radius: 10px;
+  border: 1px solid var(--line); color: var(--ink);
+}
+.links a.primary { background: #9b2a22; border-color: #9b2a22; color: #fff; }
+.how { font-size: 14px; color: var(--muted); }
+.how ol { margin: 4px 0 0; padding-left: 20px; }
+
+footer { color: var(--muted); font-size: 14px; padding: 0 0 36px; }
+footer a { color: inherit; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="bar"><button class="lang" id="lang" type="button">中文</button></div>
+    <h1><span class="en">Apps by jerron<span class="dot">.</span></span><span class="zh">jerron 的应用<span class="dot">。</span></span></h1>
+    <p>
+      <span class="en">Android apps I've made. Both are free and in early access on Google Play — try them and tell me what you think.</span>
+      <span class="zh">我做的安卓应用。都是免费的，目前在 Google Play 上提供尝鲜版，欢迎试用、多提建议。</span>
+    </p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="apps">
+
+      <a class="app soccer" href="soccer-trail/">
+        <img class="banner" src="img/soccer-trail-feature.jpg" alt="Soccer Trail" width="1024" height="500">
+        <div class="body">
+          <div class="title">
+            <img src="img/soccer-trail-icon.png" alt="" width="56" height="56">
+            <h2>Soccer Trail<small>球员轨迹</small></h2>
+          </div>
+          <div class="tags">
+            <span class="tag hot"><span class="en">Early access</span><span class="zh">尝鲜版</span></span>
+            <span class="tag">Android</span>
+            <span class="tag"><span class="en">Sports</span><span class="zh">体育</span></span>
+          </div>
+          <p>
+            <span class="en">Tap a player in a match video, follow every run, and export the clip with their running trail drawn on it.</span>
+            <span class="zh">在比赛视频里点一下球员，跟踪他的每一次跑动，导出带跑动轨迹的视频。</span>
+          </p>
+          <span class="more"><span class="en">Features, install and how to use →</span><span class="zh">功能、安装和使用方法 →</span></span>
+        </div>
+      </a>
+
+      <div class="app">
+        <img class="banner" src="img/chess-king-feature.jpg" alt="Chess King" width="1024" height="500">
+        <div class="body">
+          <div class="title">
+            <img src="img/chess-king-icon.png" alt="" width="56" height="56">
+            <h2>Chess King<small>棋王 · 中国象棋与国际象棋</small></h2>
+          </div>
+          <div class="tags">
+            <span class="tag hot"><span class="en">Early access</span><span class="zh">尝鲜版</span></span>
+            <span class="tag">Android</span>
+            <span class="tag"><span class="en">Board games</span><span class="zh">棋类</span></span>
+          </div>
+          <p>
+            <span class="en">Snap a photo of any board and get engine analysis, or play the computer — Xiangqi (Pikafish) and chess (Stockfish), all offline on your phone.</span>
+            <span class="zh">拍照识别棋局，引擎分析，人机对弈；中国象棋（皮卡鱼引擎）和国际象棋（Stockfish）都支持，不联网也能用。</span>
+          </p>
+          <div class="how">
+            <span class="en">To install: join the testers' group, become a tester, then install from Google Play with the same Google account.</span>
+            <span class="zh">安装方法：先加入测试群组，再成为测试者，然后用同一个 Google 账号从 Google Play 安装。</span>
+          </div>
+          <div class="links">
+            <a class="primary" href="https://groups.google.com/g/chess-king-testers" target="_blank" rel="noopener"><span class="en">1. Join group</span><span class="zh">1. 加入群组</span></a>
+            <a class="primary" href="https://play.google.com/apps/testing/com.jerron.xiangqi" target="_blank" rel="noopener"><span class="en">2. Become a tester</span><span class="zh">2. 成为测试者</span></a>
+            <a href="https://play.google.com/store/apps/details?id=com.jerron.xiangqi" target="_blank" rel="noopener"><span class="en">3. Google Play</span><span class="zh">3. Google Play</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    © 2026 jerron · <a href="mailto:jerron@gmail.com">jerron@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('lang');
+  function set(l) {
+    root.lang = l;
+    btn.textContent = l === 'zh' ? 'English' : '中文';
+    document.title = l === 'zh' ? 'jerron 的应用' : 'Apps by jerron';
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var q = new URLSearchParams(location.search).get('lang');
+  set(q === 'zh' || q === 'en' ? q : saved || ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en'));
+  btn.addEventListener('click', function () {
+    var l = root.lang === 'zh' ? 'en' : 'zh';
+    set(l);
+    try { localStorage.setItem('lang', l); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
