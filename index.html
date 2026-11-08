@@ -60,15 +60,8 @@ a.app:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.1
 .tag.hot { background: var(--accent); border-color: var(--accent); color: #3b2f00; font-weight: 600; }
 .more { margin-top: auto; padding-top: 6px; font-weight: 600; }
 .soccer .more { color: #1f8a43; }
-@media (prefers-color-scheme: dark) { .soccer .more { color: #6fd18f; } }
-.links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; }
-.links a {
-  text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 14px; border-radius: 10px;
-  border: 1px solid var(--line); color: var(--ink);
-}
-.links a.primary { background: #9b2a22; border-color: #9b2a22; color: #fff; }
-.how { font-size: 14px; color: var(--muted); }
-.how ol { margin: 4px 0 0; padding-left: 20px; }
+.chess .more { color: #9b2a22; }
+@media (prefers-color-scheme: dark) { .soccer .more { color: #6fd18f; } .chess .more { color: #e8a39b; } }
 
 footer { color: var(--muted); font-size: 14px; padding: 0 0 36px; }
 footer a { color: inherit; }
@@ -96,7 +89,7 @@ footer a { color: inherit; }
         <div class="body">
           <div class="title">
             <img src="img/soccer-trail-icon.png" alt="" width="56" height="56">
-            <h2>Soccer Trail<small>球员轨迹</small></h2>
+            <h2><span class="en">Soccer Trail<small>Match video player tracking</small></span><span class="zh">球员轨迹<small>Soccer Trail</small></span></h2>
           </div>
           <div class="tags">
             <span class="tag hot"><span class="en">Early access</span><span class="zh">尝鲜版</span></span>
@@ -111,12 +104,13 @@ footer a { color: inherit; }
         </div>
       </a>
 
-      <div class="app">
-        <img class="banner" src="img/chess-king-feature.jpg" alt="Chess King" width="1024" height="500">
+      <a class="app chess" href="soccer-trail/chess-king/">
+        <img class="banner en" src="soccer-trail/chess-king/img/feature.jpg" alt="Chess King" width="1024" height="500">
+        <img class="banner zh" src="img/chess-king-feature.jpg" alt="棋王" width="1024" height="500">
         <div class="body">
           <div class="title">
             <img src="img/chess-king-icon.png" alt="" width="56" height="56">
-            <h2>Chess King<small>棋王 · 中国象棋与国际象棋</small></h2>
+            <h2><span class="en">Chess King<small>Xiangqi &amp; Chess</small></span><span class="zh">棋王<small>中国象棋与国际象棋</small></span></h2>
           </div>
           <div class="tags">
             <span class="tag hot"><span class="en">Early access</span><span class="zh">尝鲜版</span></span>
@@ -127,17 +121,9 @@ footer a { color: inherit; }
             <span class="en">Snap a photo of any board and get engine analysis, or play the computer — Xiangqi (Pikafish) and chess (Stockfish), all offline on your phone.</span>
             <span class="zh">拍照识别棋局，引擎分析，人机对弈；中国象棋（皮卡鱼引擎）和国际象棋（Stockfish）都支持，不联网也能用。</span>
           </p>
-          <div class="how">
-            <span class="en">To install: join the testers' group, become a tester, then install from Google Play with the same Google account.</span>
-            <span class="zh">安装方法：先加入测试群组，再成为测试者，然后用同一个 Google 账号从 Google Play 安装。</span>
-          </div>
-          <div class="links">
-            <a class="primary" href="https://groups.google.com/g/chess-king-testers" target="_blank" rel="noopener"><span class="en">1. Join group</span><span class="zh">1. 加入群组</span></a>
-            <a class="primary" href="https://play.google.com/apps/testing/com.jerron.xiangqi" target="_blank" rel="noopener"><span class="en">2. Become a tester</span><span class="zh">2. 成为测试者</span></a>
-            <a href="https://play.google.com/store/apps/details?id=com.jerron.xiangqi" target="_blank" rel="noopener"><span class="en">3. Google Play</span><span class="zh">3. Google Play</span></a>
-          </div>
+          <span class="more"><span class="en">Features, install and how to use →</span><span class="zh">功能、安装和使用方法 →</span></span>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
